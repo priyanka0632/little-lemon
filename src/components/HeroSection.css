@@ -1,0 +1,153 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*/
+
+.Container{
+    background-image: url('./assets/BackgroundImage.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.elements{
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+     font-family: 'karla';
+    color: white;
+}
+
+#tagline{
+    font-weight: 300;
+    font-size: 2.2rem; /*View port for responsive view port sizes*/
+    font-family: 'Klee One';
+}
+
+#Heading{
+    margin-top: -1rem;
+    font-size: 5rem;
+    color: #ffd503;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+#text{
+    margin-top: 3rem;
+    font-family: 'Karla';
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#text1{
+    margin-top: -1.3rem;
+    font-family: 'karla';
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.buttons{
+    margin-top: 2rem;
+        display: flex;
+    gap: 1.5rem;
+
+}
+
+.videoButton{
+margin-top: auto;
+margin-bottom: auto;
+    gap: 0.5rem;
+    display: flex;
+}
+
+.videoButton p{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#Reservetable{ /*Id should always be unique and classname could be same throught all the CSS files*/
+   /* background-color: #ffd503;
+    color: #333333;
+    border-radius: 0.8rem;
+    height: fit-content;
+    border: #ffd503;
+    font-weight: 500;
+    font-size: 1rem; */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /*x y blur spread and color*/
+    width: 9rem;
+
+}
+
+#Reservetable:hover{
+    color: #333333;
+    background-color: #ebc505;
+}
+
+.buttons img{
+    width: 2.3rem; /*Watch video*/
+    height: 2.3rem;
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.2);
+    border-radius: 50%;
+    transition: transform .3s; /* Animation */
+}
+
+.buttons img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+.socialMedia{
+    gap: 1.1rem;
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.socialMedia img{
+    width: 1.3rem;
+    height: fit-content;
+    box-shadow: 1.5px 1.5px 3px rgba(0,0,0, 0.2);
+    border-radius: 100%;
+    transition: transform .3s;
+}
+
+.socialMedia img:hover{
+    transform: scale(1.2);
+cursor: pointer;
+}
+
+
+.heroPic{
+    margin-left: 100px;
+    margin-top: 120px;
+    margin-bottom: -60px;
+    border-radius: 100%;
+    flex: 1 1 50%;
+    width: 530px;
+    height: 530px;
+    object-fit: cover;
+}
+
+
+.heroContainer{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+@media only screen and (max-width:1200px
+) {
+    .Container {
+      .heroContainer {
+        flex-direction: column;
+        .heroPic {
+             margin-left: auto;
+        margin-top: -12px;
+          flex: unset;
+          width: 420px;
+          max-width: unset;
+          height: 420px;
+        }
+      }
+    }
+  }

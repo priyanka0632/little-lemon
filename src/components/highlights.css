@@ -1,0 +1,12 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*/
+.Weeklyspecials{
+    margin-top: 4rem;
+}
+
+.specials p{
+    margin-top: 1rem;
+    font-family: 'karla';
+    font-size: 1.2em;
+    font-weight: 400;
+}

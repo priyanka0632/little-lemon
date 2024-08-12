@@ -1,0 +1,113 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+applied every font in app css and button properties as well wherever used the same button*/
+#logo{
+    width: 11rem;
+    height:fit-content ;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.5vw;
+}
+
+#nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    font-weight: 500;
+    font-family: 'Karla';
+    font-size: 1rem;
+   /* transition: transform .2s; /* Animation */
+}
+
+      #nav-links:after {
+        content: '';
+        position: absolute;
+        width: 5.8rem;
+        transform: scaleX(0);
+        height: 2px;
+        margin-top: 2.2rem;
+        background-color: #ffd503;
+        transform-origin: bottom right;
+        transition: transform 0.18s ease-out;
+      }
+
+      /*visited links color, non visited we'll check for later*/
+    
+      #nav-links:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+    /*  @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }*/
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+   /* animation-duration: 0.7s;
+    animation-name: fadeInDown;
+    animation-timing-function: ease-out;
+*/
+}
+
+#navbar{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+}
+
+
+#icon{
+    width: 1.2rem;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1vw;
+    cursor: pointer;
+       transition: transform .3s; /* Animation */
+       color: #333333;
+}
+#icon:hover{
+cursor: pointer;
+color: #ffd503;
+transform: scale(1.3);
+}
+
+/*.Button{
+    background-color: #ffd503;
+    color: #333333;
+    border: #ffd503;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Karla';
+    border-radius: 0.8rem;
+    width: 5.5rem;
+    height: fit-content;
+}*/
+
+/*#button:hover{
+    color: #333333;
+    background-color: #F4CE14;
+}*/
+
+/*#button:focus{
+    background-color: white;
+    color: black;
+    border: 0.1rem solid #F4CE14;
+}
+
+button focus on click properties*/
+
+/*Search bar css*/
