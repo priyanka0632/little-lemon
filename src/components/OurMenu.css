@@ -45,6 +45,12 @@ transition: transform .3s; /* Animation */
     transform: scale(1.08);
 }
 
+.meals::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
 @media only screen and (max-width:800px){
     .menuItems{
 /*To remove the extra spaces when made responsive*/
@@ -52,8 +58,12 @@ transition: transform .3s; /* Animation */
         display: flex;
         width: auto;
         max-width: 100%;
+        height: fit-content;
         overflow-x: auto;
      }
+   /*width and height 0 to remove the extra space of the scrollbar and added the background transparent
+    to hide the scrollbar entirely, webkit-scrollbar is used to remove the scrollbar in chrome*/
+
     }
 
 }
