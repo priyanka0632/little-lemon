@@ -2,19 +2,46 @@ import { Container } from 'react-bootstrap'
 import './highlights.css'
 import { ArrowLeftCircle } from 'react-bootstrap-icons';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import Modal from 'react-bootstrap/Modal';
 import GreekSalad from './assets/Snacks.jpg';
 import Bruschetta from './assets/Bruschetta.jpg';
 import LemonHotdog from './assets/heroImage.jpg';
 import LemonPasta from './assets/Patsa.jpg'
 import GreekFish from './assets/greekfish.jpg';
 import { Stopwatch } from 'react-bootstrap-icons';
+import React from 'react';
 
 function onClickForArrow(val){
     document.querySelector(".highlights").scrollLeft += val; //queryselector is an advanced feature of the get element by Id/class as . and #
     //suggests id and class in css
 }
 
+function MyVerticallyCenteredModal(props){
+return(
+
+    <Modal
+    {...props}
+    centered
+    className='model-content'
+    >
+<Modal.Header closeButton>
+    <Modal.Title>
+        Modal Heading
+    </Modal.Title>
+</Modal.Header>
+        <Modal.Body>
+            <h4>Centered Modal</h4>
+            <p>Just putting any code here to test the working of the modal bootstrap react if it's actually working or not</p>
+        </Modal.Body>
+    </Modal>
+
+
+)
+}
+
 function Highlights(){
+    const[modalShow, setModalShow] = React.useState(false);
+
 let highlights = [
     [GreekSalad, 'The Greek Salad', '$12.99',
         'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished...', '15 mins'],
@@ -51,10 +78,15 @@ let highlights = [
             return(
                 <div className='image'>
                     <div className='highlightspecial'>
-                        <div className='foodimages'>
-                                          <img src={ele[0]} alt={ele[1]} ></img>
+                        <div className='foodimages' onClick={() => setModalShow(true)}>
+                                          <img src={ele[0]} alt={ele[1]}></img>
                                           </div>
-                                          <div className='imagedetails'>
+                                          <MyVerticallyCenteredModal show={modalShow}
+                                          onHide={() => setModalShow(false)}
+                                          ></MyVerticallyCenteredModal>
+
+
+                                          <div className='imagedetails' onClick={()=>setModalShow(true)}>
                                           <p className='imageheading'>{ele[1]}</p>
                                           <div>
                                             <p>{ele[2]}</p>

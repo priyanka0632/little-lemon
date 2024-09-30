@@ -82,11 +82,24 @@ border-radius: 50%;
     display: inline-block;
     background: -webkit-linear-gradient(top, rgb(253, 254, 255, 0) 0%,rgba(4, 4, 4, 0.5) 100%); /* Chrome10+,Safari5.1+ */
 }
+
+
+
+
 .foodimages{
     display: flex;
     box-shadow: 0px 4px 5px rgba(0,0,0, 0.4);
     border-radius: 7%;
+}
 
+/*for Modals*/
+
+.modal-backdrop{
+    background-color: rgba(254, 254, 254, 0.3);
+}
+
+.model-content{
+    box-shadow: 0px 4px 5px rgba(0,0,0, 0.4);
 }
 
 .highlightspecial{
